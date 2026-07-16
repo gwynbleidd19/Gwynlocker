@@ -1,0 +1,16 @@
+Microcontroller: Arduino Nano
+Environment: VS Code (Platformio)
+Power: Duracell 9V 6LRR61
+======================================
+
+Shift register: clock(11)-nano(12); latch(12)-nano(11); data(14)-nano(10); 
+
+Keyboard: D2(nano)-R4, D3-R3, D4-R2, D5-R1, D6-C1, D7-C2, D8-C3, D9-C4; 
+
+Pins out of the shift register:   Q1-Q3 Green leds (Correct pincode) and 220 Ohm resistors between pin and led; 
+                                  Q4-Q6 Red Leds (Incorrect pincode) and 220 Ohm resistors between pin and led.
+                             
+Pins out of the i2c display module: SDA-A4, SCL-A5
+
+Buzzer: A0
+

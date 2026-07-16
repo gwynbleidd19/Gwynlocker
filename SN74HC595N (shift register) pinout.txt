@@ -1,0 +1,27 @@
+SN74HC595N 8-Bit Shift Register Pinout
+---------------------------------------
+
+       +------\/------+
+       | 1  |    | 16 | <- VCC (Power Supply, +5V)
+       | 2  |    | 15 | <- Q0 (Output 0)
+       | 3  |    | 14 | <- SER (Serial Data Input)
+       | 4  |    | 13 | <- OE (Output Enable, Active LOW)
+       | 5  |    | 12 | <- RCLK (Latch Clock / Storage Register Clock)
+       | 6  |    | 11 | <- SRCLK (Shift Register Clock)
+       | 7  |    | 10 | <- SRCLR (Shift Register Clear, Active LOW)
+       | 8  |    |  9 | <- Q7' (Cascade Output to next IC)
+       +----|    |----+
+            |____|
+
+       Pin 8: GND (Ground)
+
+-------------------------------
+Functional Description:
+-------------------------------
+- SER (14): Data flows into the shift register through this pin.
+- SRCLK (11): Each rising edge shifts the data in by 1 bit.
+- RCLK (12): Latches the data from the shift register to the outputs.
+- OE (13): Set LOW (GND) to enable outputs; HIGH (5V) to turn outputs off.
+- SRCLR (10): Set HIGH (5V) for normal operation; LOW to reset all bits to 0.
+- Q0 - Q7 (15, 1-7): Output pins for LEDs or 7-segment displays.
+- Q7' (9): Connects to the SER (14) pin of the next 74HC5
